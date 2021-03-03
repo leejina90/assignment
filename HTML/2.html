@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>카카오계정</title>
+    <style>
+        * {margin: 0; padding: 0; border: 0; list-style: none; text-decoration: none;}
+        a {color: #000; font-size: 13px;}
+        p, label, span {font-size: 13px;}
+
+        header {width: 100%; height: 150px;}
+
+        main {width:1024px; height:650px; margin: 0 auto;}
+        article > div {width: 540px; float: left;}
+        article > div img {width: 540px;}
+
+        article form {width: 300px; float: left; border: 1px solid #ccc; padding: 70px;}
+        article form > img {display: block;}
+        #input_id, #input_pw {width: 300px; height: 40px; border-bottom: 1px solid #ddd; margin-bottom: 10px;}
+        article form label {display: block; margin-top: 20px; margin-bottom: 40px;}
+
+        #button_login {width: 300px; height: 50px; background-color: #FEE500;}
+        #login_span {display: inline-block; margin: 10px 45%;}
+        #button_qr {width: 300px; height: 50px; background-color: #F6F6F6; margin-bottom: 30px;}
+
+        #join a {}
+        #join ul {float: right;}
+        #join ul li {float: left;}
+        #join ul li:first-child {border-right: 1px solid #ddd; padding-right: 10px; margin-right: 10px;}
+
+        footer {text-align: center;}
+        footer ul {width: 1024px; margin: 0 auto;}
+        footer ul li {display: inline-block; margin: 5px;}
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <article>
+                <div>
+                    <h3>카카오 계정 하나로 충분합니다.</h3>
+                    <p>Kakao의 모든 서비스 뿐 아니라 Melon, Daum등 다른 다양한 서비스까지</p>
+                    <p>이제 카카오계정으로 이용해 보세요!</p>
+                    <img src="img/banner_login1.png" alt="kakao_login"/>
+                </div>
+                <form>
+                    <img src="img/kakao_logo.png" alt="kakao"/>
+                    <input type="text" id="input_id" placeholder="카카오메일 아이디, 이메일, 전화번호">
+                    <input type="password" id="input_pw" placeholder="비밀번호">
+                    <label><input type="checkbox">로그인 상태 유지</label>
+
+                    <button id="button_login">로그인</button>
+                    <span id="login_span">또는</span>
+                    <button id="button_qr" onclick="window.open('https://accounts.kakao.com/qr_login?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount%2Finfo&moveToQr=true&staySignedIn=false')">QR코드 로그인</button>
+                    <div id="join">
+                        <a href="#">회원가입</a>
+                        <ul>
+                            <li><a href="#">카카오계정</a></li>
+                            <li><a href="#">비밀번호 찾기</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#"><b>개인정보 처리방침</b></a></li>
+            <li><a href="#">운영정책</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li>
+                <select>
+                    <option selected>한국어</option>
+                    <option>english</option>
+                    <option>日本語</option>
+                </select>
+            </li>
+        </ul>
+        <p>Copyright © <b>Kakao Corp.</b> All rights reserved.</p>
+    </footer>
+</body>
+</html>
