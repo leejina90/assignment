@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {margin: 0; padding: 0; border: 0; list-style: none; text-decoration: none;}
+        p, label, span {font-size: 13px; font-weight: 700;}
+        legend {font-size: 13px; font-weight: 700;}
+        input::placeholder {font-size: 16px; color: #ccc; font-weight: 700;}
+        fieldset {margin-bottom: 40px;}
+        input[type=text],
+        input[type=password] {width: 440px; height: 50px; margin-bottom: 20px; border-bottom: 2px solid #ddd;}
+        option {font-size: 15px;}
+
+        header {width: 100px; margin: 40px auto;}
+        form {width: 440px; margin: 0 auto; border: 1px solid #ddd; padding: 70px;}
+        main > form > h2 {margin-bottom: 40px;}
+        #id {position: relative;}
+        #id input {width: 440px; height: 50px; margin-bottom: 20px; border-bottom: 2px solid #ddd;}
+        #id div {position: absolute; top: 30px; right: 2px;}
+        #id div span {font-size: 16px; color: #777;}
+        #id_etc > li {list-style: disc; font-size: 11px; margin-left: 20px; color: #888; font-weight: 600;}
+
+        #nickname {position: relative; height: 50px;}
+        #nickname div {position: absolute; top: 30px; right: 2px;}
+        #nickname div span {font-size: 16px; color: #777;}
+
+        #tel {position: relative;}
+        #tel div {position: absolute; top: 30px; left: 2px;}
+        input[type=tel] {width: 380px; height: 50px; margin-bottom: 20px; border-bottom: 2px solid #ddd;}
+        #tel input {padding-left:  60px;}
+        #tel button {width: 150px; height: 40px; border-radius: 50px; border: 1px solid #ddd; background-color: #fff; font-weight: 700; font-size: 15px; float: right;}
+
+        #day {width: 440px; height: 50px; margin-bottom: 20px; border-bottom: 2px solid #ddd;}
+        #day ul {padding-top: 15px;}
+        #day ul li {float: left; margin-right: 70px;}
+        #day label {float: right;}
+        #sex label {margin-right: 50px; font-size: 15px;}
+        
+        #next {width: 440px; height: 50px; background-color: #F6F6F6; font-weight: 700; font-size: 15px; border-radius: 5px;}
+
+        footer {text-align: center; margin: 40px auto;}
+        footer ul {width: 580px; margin: 0 auto;}
+        footer ul li {display: inline-block; margin: 5px; font-size: 12px;}
+        footer ul li a {color: #333;}
+        footer p {color: #777; font-weight: 500;}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/kakao_logo.png" alt=kakao />
+    </header>
+    <main>
+        <form>
+            <h2>카카오계정 정보를 입력해주세요</h2>
+            <fieldset id="id">
+                <legend>카카오계정 이메일</legend>
+                <label><input type="text" placeholder="아이디 입력"></label>
+                <div>
+                    <span>@kakao.com</span>
+                </div>
+                <ul id="id_etc">
+                    <li>입력한 카카오메일로 카카오계정에 로그인할 수 있습니다.</li>
+                    <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해주세요.</li>
+                    <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>비밀번호</legend>
+                <label><input type="password" placeholder="비밀번호(8~32자리)"></label>
+                <label><input type="password" placeholder="비밀번호 재입력"></label>
+            </fieldset>
+            <fieldset id="nickname">
+                <legend>닉네임</legend>
+                <label><input type="text" maxlength="20" placeholder="닉네임을 입력해주세요."></label>
+                <div>
+                    <span>0/20</span>
+                </div>
+            </fieldset>
+            <fieldset id="tel">
+                <legend>전화번호</legend>
+                <div>
+                    <select style="font-size:15px;">
+                        <option>+1</option>
+                        <option selected>+82</option>
+                        <option>+966</option>
+                    </select>
+                </div>
+                <label><input type="tel" placeholder="전화번호"></label>
+                <button>인증번호 전송</button>
+            </fieldset>
+            <fieldset id="day_sex">
+                <legend>생일/성별</legend>
+                <div id="day">
+                    <ul>
+                        <li>
+                            <select style="font-size:15px;">
+                                <option selected>연도</option>
+                                <option>2007</option>
+                                <option>2006</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select style="font-size:15px;">
+                                <option selected>월</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select style="font-size:15px;">
+                                <option selected>일</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <label style="font-size:15px;"><input type="checkbox">음력</label>
+                </div>
+                <div id="sex">
+                    <label><input type="radio" name="sex" value="none">선택안함</label>
+                    <label><input type="radio" name="sex" value="female">여성</label>
+                    <label><input type="radio" name="sex" value="male">남성</label>
+                </div>
+            </fieldset>
+            <button id="next">다음</button>
+        </form>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#"><b>개인정보 처리방침</b></a></li>
+            <li><a href="#">운영정책</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li>
+                <select>
+                    <option selected>한국어</option>
+                    <option>english</option>
+                    <option>日本語</option>
+                </select>
+            </li>
+        </ul>
+        <p>Copyright © <b>Kakao Corp.</b> All rights reserved.</p>
+    </footer>
+</body>
+</html>
