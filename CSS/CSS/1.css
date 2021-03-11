@@ -7,9 +7,9 @@ ul {list-style: none;}
 img {border: 0;}
 
 body {
-    width: 1160px;
     margin: 0 auto;
     font-size: 16px;
+    position: relative;
 }
 
 /* header */
@@ -35,6 +35,9 @@ body {
     padding: 10px 0;
     border-top: 1px solid #222;
 }
+#login > a > i {
+    margin-right:10px;
+}
 
 #main_gnb {
     border-top: 1px solid #222;
@@ -43,7 +46,13 @@ body {
 #main_gnb > li {
     margin: 15px 0;
 }
-
+#main_gnb > li > a > i {
+    margin-right: 10px;
+}
+#main_gnb > li:nth-child(4) > a > i {
+    margin-left: 3px;
+    margin-right: 14px;
+}
 #sub_gnb {
     border-top: 1px solid #222;
     padding: 20px 0;
@@ -68,12 +77,15 @@ body {
     position: fixed;
     bottom: 0; right: 0; left: 0;
     background: #333;
-    height: 80px;
+    height: 40px;
+    overflow: hidden;
+    padding: 20px;
 }
 
 #song_info {
     overflow: hidden;
-    margin: 20px;
+    margin-right: 20px;
+    float: left;
 }
 #song_info > img {
     float: left;
@@ -93,4 +105,67 @@ body {
 #song_info > div > p {
     font-size: 12px;
     color: #aaa;
+}
+#player_control {
+    overflow: hidden;
+}
+#player_control {
+    position: absolute;
+    left: 45%; top: 25px;
+    height: 45px;
+}
+#player_control > i {
+    margin-right: 10px;
+    color: #666;
+}
+#player_control > i:nth-child(1):hover,
+#player_control > i:nth-child(3):hover {
+    color: #FFF;
+}
+#player_control > i:nth-child(2) {
+    color: red;
+}
+#player_control > i:nth-child(2):hover {
+    color: #FFF;
+}
+#volume {
+    position: absolute;
+    right: 10%;
+    color: #aaa;
+    height: 40px;
+    line-height: 40px;
+}
+#volume > progress {
+    width: 80px;
+    height: 10px;
+    color: #666;
+    margin-bottom: 3px;
+}
+#play_list {
+    position: absolute;
+    right: 0; 
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #aaa;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* main */
+/* section_1 */
+#main_content {
+    position: absolute;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 1000px;
+    z-index: -999;
+}
+#section_1 {
+    width: 1160px;
+    margin: 0 auto;
+    background: black;
+    overflow: hidden;
+}
+#section_1 > img {
+    float: left;
 }
