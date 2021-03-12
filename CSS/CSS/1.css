@@ -160,6 +160,11 @@ body {
     height: 1000px;
     z-index: -999;
 }
+#special_mag {
+    width: 100%;
+    height: 600px;
+    background: #F2F2F2;
+}
 #section_1 {
     width: 1160px;
     margin: 0 auto;
